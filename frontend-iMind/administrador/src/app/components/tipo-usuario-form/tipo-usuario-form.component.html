@@ -1,0 +1,17 @@
+<div class="container mt-4">
+  <h2>{{ tipoUsuarioId ? 'Editar Tipo de Usuario' : 'Agregar Tipo de Usuario' }}</h2>
+  <form [formGroup]="tipoUsuarioForm" (ngSubmit)="guardarTipoUsuario()">
+    <div class="form-group">
+      <label for="nombre">Nombre:</label>
+      <input id="nombre" formControlName="nombre" type="text" class="form-control" placeholder="Ingrese el nombre del tipo de usuario">
+    </div>
+    <div class="form-group">
+      <label for="descripcion">Descripción:</label>
+      <input id="descripcion" formControlName="descripcion" type="text" class="form-control" placeholder="Ingrese la descripción del tipo de usuario">
+    </div>
+    <div class="form-group d-flex justify-content-between">
+      <button type="submit" class="btn btn-success">{{ tipoUsuarioId ? 'Guardar Cambios' : 'Agregar Tipo de Usuario' }}</button>
+      <button type="button" class="btn btn-danger" [routerLink]="'/tipo-usuarios'">Cancelar</button>
+    </div>
+  </form>
+</div>
