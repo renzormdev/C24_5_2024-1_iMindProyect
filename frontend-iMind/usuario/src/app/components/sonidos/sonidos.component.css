@@ -1,0 +1,44 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.card {
+  border: 1px solid #dee2e6; /* Borde claro */
+  border-radius: 0.5rem; /* Borde redondeado */
+  background-color: #ffffff; /* Fondo blanco */
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); /* Sombra */
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  background-color: #007bff; /* Color del botón */
+  border: none;
+  border-radius: 0.25rem;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+audio {
+  width: 100%;
+  margin-top: 1rem;
+}

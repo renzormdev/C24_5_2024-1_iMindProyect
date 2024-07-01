@@ -1,0 +1,62 @@
+/* Estilos personalizados para el componente login */
+.container {
+  margin-top: 5rem;
+}
+
+.card {
+  border: 1px solid #dee2e6; /* Borde claro */
+  border-radius: 0.5rem; /* Borde redondeado */
+  background-color: #F0DCCD; /* Fondo blanco */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem; /* Espaciado interno */
+  width: 100%;
+  max-width: 400px;
+}
+
+.card-title {
+  font-size: 2rem; /* Tamaño de fuente */
+  font-weight: 600; /* Grosor de fuente */
+  color: #343a40; /* Color de texto */
+  text-align: center; /* Centramos el texto */
+}
+
+.form-control {
+  border: none;
+  border-bottom: 1px solid #000; /* Línea inferior */
+  background-color: transparent;
+  border-radius: 0;
+  font-size: 1rem; /* Tamaño de fuente */
+  padding: 10px;
+  margin-bottom: 20px; /* Espaciado inferior */
+}
+
+.form-group label {
+  font-size: 1rem; /* Tamaño de fuente */
+  font-weight: 500; /* Grosor de fuente */
+  color: #000; /* Color de texto */
+}
+
+.form-control:focus {
+  box-shadow: none; /* Sin sombra */
+}
+
+.btn {
+  background-color: #EDBBAC; /* Color de fondo del botón */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 0.5rem 1rem; /* Espaciado interno */
+  font-size: 1rem; /* Tamaño de fuente */
+  font-weight: 600; /* Grosor de fuente */
+  color: #fff; /* Color del texto */
+  cursor: pointer;
+  width: 100%; /* Botón de ancho completo */
+}
+
+.btn:hover {
+  background-color: #eb9f88; /* Color de fondo del botón al pasar el cursor */
+}
+
+body {
+  background-color: #f2e9db; /* Fondo del cuerpo */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Tipografía */
+}

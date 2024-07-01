@@ -1,0 +1,31 @@
+/* Estilos personalizados para el navmenu */
+.navbar {
+  background-color: #f8f9fa; /* Fondo claro */
+  border-bottom: 2px solid #dee2e6; /* Línea inferior */
+}
+
+.navbar-brand, .nav-link {
+  color: #343a40 !important; /* Texto oscuro */
+}
+
+.navbar-brand:hover, .nav-link:hover {
+  color: #007bff !important; /* Texto azul al pasar el cursor */
+}
+
+.navbar-nav .nav-item + .nav-item {
+  margin-left: 1rem; /* Espaciado entre elementos del menú */
+}
+
+.nav-link {
+  font-size: 1.1rem; /* Tamaño de fuente */
+  font-weight: 500; /* Grosor de fuente */
+}
+
+.bg-body-tertiary {
+  background-color: #EBBB99 !important; /* Fondo general del cuerpo */
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Tipografía */
+  background-color: #EBBB99; /* Fondo general del cuerpo */
+}
