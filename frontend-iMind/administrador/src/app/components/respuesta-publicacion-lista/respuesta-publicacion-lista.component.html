@@ -1,25 +1,38 @@
 <div class="container mt-4">
   <div class="header d-flex justify-content-between align-items-center mb-4">
-    <h2>Lista de Respuestas a Publicaciones</h2>
-    <button class="btn btn-success" >Agregar Respuesta</button>
+    <h2>Respuestas a Publicaciones</h2>
+    <button class="btn btn-primary">Agregar Respuesta</button>
   </div>
 
-  <div class="empty-state text-center">
-    <p>No hay respuestas a ninguna publicacion</p>
-  </div>
+  <!-- Lista de respuestas a publicaciones -->
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Contenido</th>
+        <th>Fecha de Creación</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Respuesta 1 -->
+      <tr>
+        <td>Gracias por compartir estos consejos tan útiles.</td>
+        <td>2024-06-30</td>
+        <td>
+          <button class="btn btn-success me-2 custom-margin">Editar</button>
+          <button class="btn btn-danger">Eliminar</button>
+        </td>
+      </tr>
 
-  <div class="row justify-content-center">
-    <div class="col-md-4 mb-4" >
-      <div class="card h-100">
-        <div class="card-body">
-          <h3 class="card-title">Nombre</h3>
-          <p class="card-text">Descripcion</p>
-        </div>
-        <div class="card-footer d-flex justify-content-between">
-          <button class="btn btn-primary me-2 custom-margin" >Editar</button>
-          <button class="btn btn-danger custom-margin" >Eliminar</button>
-        </div>
-      </div>
-    </div>
-  </div>
+      <!-- Respuesta 2 -->
+      <tr>
+        <td>Me alegra que hayas superado la ansiedad, ¡sigue adelante!</td>
+        <td>2024-07-01</td>
+        <td>
+          <button class="btn btn-success me-2 custom-margin">Editar</button>
+          <button class="btn btn-danger">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>

@@ -8,36 +8,33 @@ import { UsuarioService } from '../../services/usuario.service';
   styleUrls: ['./usuario-lista.component.css']
 })
 export class UsuarioListaComponent implements OnInit {
-  usuarios: any[] = [];  // Define el tipo de tus usuarios correctamente
 
-  constructor(
-    private usuarioService: UsuarioService,
-    private router: Router
-  ) { }
+  usuarios: any[] = []; // Aquí deberías definir un arreglo para almacenar los usuarios
+
+  constructor() { }
 
   ngOnInit(): void {
-    this.cargarUsuarios();
+    // Aquí puedes inicializar datos o llamar a métodos necesarios al iniciar el componente
+    // Por ejemplo, podrías cargar usuarios desde un servicio aquí
+    this.cargarUsuariosEstaticos(); // Método para cargar usuarios estáticos
   }
 
-  cargarUsuarios(): void {
-    this.usuarioService.obtenerUsuarios().subscribe(usuarios => {
-      this.usuarios = usuarios;
-    });
+  cargarUsuariosEstaticos(): void {
+    // Cargar usuarios estáticos como ejemplo
+    this.usuarios = [
+      { id: 1, nombre: 'Juan Pérez', descripcion: 'Usuario estándar' },
+      { id: 2, nombre: 'María García', descripcion: 'Usuario administrador' }
+    ];
   }
 
-  editarUsuario(id: string): void {
-    this.router.navigate(['/editar-usuario', id]);
+  // Métodos para editar o eliminar usuarios
+  editarUsuario(id: number): void {
+    // Implementar lógica de edición aquí
+    console.log('Editar usuario con ID:', id);
   }
 
-  eliminarUsuario(id: string): void {
-    if (confirm('¿Estás seguro de eliminar este usuario?')) {
-      this.usuarioService.eliminarUsuario(id).subscribe(() => {
-        this.cargarUsuarios();  // Recargar la lista después de eliminar
-      });
-    }
-  }
-
-  agregarUsuario(): void {
-    this.router.navigate(['/agregar-usuario']);
+  eliminarUsuario(id: number): void {
+    // Implementar lógica de eliminación aquí
+    console.log('Eliminar usuario con ID:', id);
   }
 }
