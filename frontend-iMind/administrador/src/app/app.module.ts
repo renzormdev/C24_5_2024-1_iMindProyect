@@ -16,6 +16,7 @@ import { RespuestaPublicacionListaComponent } from './components/respuesta-publi
 import { RespuestaPublicacionFormComponent } from './components/respuesta-publicacion-form/respuesta-publicacion-form.component';
 import { MultimediaListaComponent } from './components/multimedia-lista/multimedia-lista.component';
 import { MultimediaFormComponent } from './components/multimedia-form/multimedia-form.component';
+import { NavmenuComponent } from './components/navmenu/navmenu.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { MultimediaFormComponent } from './components/multimedia-form/multimedia
     RespuestaPublicacionListaComponent,
     RespuestaPublicacionFormComponent,
     MultimediaListaComponent,
-    MultimediaFormComponent
+    MultimediaFormComponent,
+    NavmenuComponent
   ],
   imports: [
     BrowserModule,

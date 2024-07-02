@@ -10,7 +10,7 @@ import { TipoUsuarioService } from '../../services/tipo-usuario.service';  // As
 })
 export class TipoUsuarioFormComponent implements OnInit {
   tipoUsuarioForm: FormGroup;
-  tipoUsuarioId: number | null = null;  // Inicializamos tipoUsuarioId
+  tipoUsuarioId: string | null = null;  // Inicializamos tipoUsuarioId
 
   constructor(
     private fb: FormBuilder,
@@ -33,7 +33,7 @@ export class TipoUsuarioFormComponent implements OnInit {
     });
   }
 
-  loadTipoUsuario(id: number): void {
+  loadTipoUsuario(id: string): void {
     this.tipoUsuarioService.obtenerTipoUsuarioPorId(id).subscribe(tipoUsuario => {
       this.tipoUsuarioForm.patchValue(tipoUsuario);
     });

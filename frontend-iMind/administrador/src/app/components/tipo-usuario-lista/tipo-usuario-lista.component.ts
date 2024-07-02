@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TipoUsuarioService } from '../../services/tipo-usuario.service';
+
 @Component({
   selector: 'app-tipo-usuario-lista',
   templateUrl: './tipo-usuario-lista.component.html',
@@ -22,20 +23,18 @@ export class TipoUsuarioListaComponent implements OnInit {
     });
   }
 
-  editarTipoUsuario(id: number): void {
-    this.router.navigate(['/tipo-usuarios/editar', id]);
+  editarTipoUsuario(id: string): void {
+    this.router.navigate(['/editar-tipo-usuarios', id]);
   }
 
-  eliminarTipoUsuario(id: number): void {
-    if (confirm('¿Estás seguro de eliminar este tipo de usuario?')) {
-      this.tipoUsuarioService.eliminarTipoUsuario(id).subscribe(() => {
-        this.obtenerTipoUsuarios();  // Recargar la lista después de eliminar
-      });
-    }
+  eliminarTipoUsuario(id: string): void {
+    this.tipoUsuarioService.eliminarTipoUsuario(id).subscribe(() => {
+      this.obtenerTipoUsuarios();
+    });
   }
 
   agregarTipoUsuario(): void {
-    this.router.navigate(['/tipo-usuarios/agregar']);
+    this.router.navigate(['/agregar-tipo-usuarios']);
   }
 
 }
