@@ -75,10 +75,39 @@ const deleteUsuario = async (req, res) => {
     }
 };
 
+const registerUsuario = async (req, res) => {
+    const { tipo_usuario_id, nombre, correo, contrasena } = req.body;
+
+    try {
+        // Verificar si el usuario ya existe
+        const usuarioExistente = await Usuario.findOne({ where: { correo } });
+        if (usuarioExistente) {
+            return res.status(400).json({ mensaje: 'El usuario ya existe' });
+        }
+
+        // Encriptar la contraseña
+        const hashedPassword = await bcrypt.hash(contrasena, 10);
+
+        // Crear el nuevo usuario
+        const nuevoUsuario = await Usuario.create({
+            tipo_usuario_id,
+            nombre,
+            correo,
+            contrasena: hashedPassword,
+            fecha_creacion: new Date()
+        });
+
+        res.status(201).json({ mensaje: 'Usuario registrado con éxito' });
+    } catch (error) {
+        res.status(500).json({ mensaje: 'Error al registrar usuario', error });
+    }
+};
+
 export const methods = {
     getUsuarios,
     getUsuario,
     addUsuarios,
     updateUsuario,
-    deleteUsuario
+    deleteUsuario,
+    registerUsuario
 };

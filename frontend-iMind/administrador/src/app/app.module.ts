@@ -31,7 +31,7 @@ import { MultimediaFormComponent } from './components/multimedia-form/multimedia
     RespuestaPublicacionListaComponent,
     RespuestaPublicacionFormComponent,
     MultimediaListaComponent,
-    MultimediaFormComponent
+    MultimediaFormComponent,
   ],
   imports: [
     BrowserModule,

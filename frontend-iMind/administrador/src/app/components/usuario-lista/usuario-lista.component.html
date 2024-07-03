@@ -1,1 +1,43 @@
-<p>usuario-lista works!</p>
+<div class="container mt-4">
+  <div class="header d-flex justify-content-between align-items-center mb-4">
+    <h2>Lista de Usuarios</h2>
+    <button class="btn btn-primary">Agregar Usuario</button>
+  </div>
+
+  <!-- Lista de usuarios -->
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Fila estática 1 -->
+      <tr>
+        <td>Juan Pérez</td>
+        <td>Usuario estándar</td>
+        <td>
+          <button class="btn btn-success me-2 custom-margin">Editar</button>
+          <button class="btn btn-danger">Eliminar</button>
+        </td>
+      </tr>
+
+      <!-- Fila estática 2 -->
+      <tr>
+        <td>María García</td>
+        <td>Usuario administrador</td>
+        <td>
+          <button class="btn btn-success me-2 custom-margin">Editar</button>
+          <button class="btn btn-danger">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Estado vacío si no hay usuarios -->
+  <div class="empty-state text-center" style="display: none;">
+    <p>No hay usuarios disponibles.</p>
+  </div>
+</div>

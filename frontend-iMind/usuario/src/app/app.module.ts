@@ -10,6 +10,8 @@ import { LoginComponent } from './components/login/login.component';
 import { NavmenuComponent } from './components/navmenu/navmenu.component';
 import { RegisterComponent } from './components/register/register.component';
 import { SonidosComponent } from './components/sonidos/sonidos.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,10 +26,12 @@ import { SonidosComponent } from './components/sonidos/sonidos.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideHttpClient(withInterceptorsFromDi()) // Proveer HttpClient en lugar de HttpClientModule
   ],
   bootstrap: [AppComponent]
 })

@@ -15,11 +15,11 @@ import { MultimediaFormComponent } from './components/multimedia-form/multimedia
 
 export const routes: Routes = [
   { path: 'tipo-usuarios', component: TipoUsuarioListaComponent },
-  { path: 'tipo-usuarios/agregar', component: TipoUsuarioFormComponent },
-  { path: 'tipo-usuarios/editar/:id', component: TipoUsuarioFormComponent },
+  { path: 'agregar-tipo-usuario', component: TipoUsuarioFormComponent },
+  { path: 'editar-tipo-usuario/:id', component: TipoUsuarioFormComponent },
   { path: 'usuarios', component: UsuarioListaComponent },
-  { path: 'usuarios/agregar', component: UsuarioFormComponent },
-  { path: 'usuarios/editar/:id', component: UsuarioFormComponent },
+  { path: 'agregar-usuario', component: UsuarioFormComponent },
+  { path: 'editar-usuario/:id', component: UsuarioFormComponent },
   { path: 'ejercicios', component: EjercicioListaComponent },
   { path: 'ejercicios/agregar', component: EjercicioFormComponent },
   { path: 'ejercicios/editar/:id', component: EjercicioFormComponent },

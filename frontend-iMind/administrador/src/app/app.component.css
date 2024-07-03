@@ -22,7 +22,7 @@
 
 .navbar-nav .nav-link.active {
   font-weight: bold;
-  background-color: #4caf50;
+  background-color: #EDBBAC;
   border-radius: 4px;
 }
 
@@ -38,7 +38,7 @@
 
 /* Pie de página */
 .footer {
-  background-color: #28a745; /* Verde amarillento */
+  background-color: #EBBB99; /* Verde amarillento */
   color: #fff;
   text-align: center;
   padding: 10px 0;

@@ -14,7 +14,7 @@ export class TipoUsuarioService {
     return this.http.get<any[]>(this.apiUrl);
   }
 
-  obtenerTipoUsuarioPorId(id: number): Observable<any> {
+  obtenerTipoUsuarioPorId(id: string): Observable<any> {
     return this.http.get<any>(`${this.apiUrl}/${id}`);
   }
 
@@ -22,12 +22,12 @@ export class TipoUsuarioService {
     return this.http.post<any>(this.apiUrl, tipoUsuario);
   }
 
-  actualizarTipoUsuario(id: number, tipoUsuario: any): Observable<any> {
+  actualizarTipoUsuario(id: string, tipoUsuario: any): Observable<any> {
     return this.http.put<any>(`${this.apiUrl}/${id}`, tipoUsuario);
   }
 
-  eliminarTipoUsuario(id: number): Observable<void> {
-    return this.http.delete<void>(`${this.apiUrl}/${id}`);
+  eliminarTipoUsuario(id: string): Observable<any> {
+    return this.http.delete<any>(`${this.apiUrl}/${id}`);
   }
 
 }
