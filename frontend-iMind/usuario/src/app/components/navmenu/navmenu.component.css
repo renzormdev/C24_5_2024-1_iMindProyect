@@ -1,31 +1,58 @@
-/* Estilos personalizados para el navmenu */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Tipografía */
+  background-color: #FFFFFF; /* White background */
+}
+
 .navbar {
-  background-color: #f8f9fa; /* Fondo claro */
-  border-bottom: 2px solid #dee2e6; /* Línea inferior */
+  padding: 1rem 2rem;
+  background-color: #EBBB99!important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem; /* Medium font size */
 }
 
-.navbar-brand, .nav-link {
-  color: #343a40 !important; /* Texto oscuro */
+.navbar-brand {
+  font-size: 1.5rem; /* Medium font size */
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
 }
 
-.navbar-brand:hover, .nav-link:hover {
-  color: #007bff !important; /* Texto azul al pasar el cursor */
-}
-
-.navbar-nav .nav-item + .nav-item {
-  margin-left: 1rem; /* Espaciado entre elementos del menú */
+.navbar-nav {
+  margin-top: 0.5rem;
 }
 
 .nav-link {
-  font-size: 1.1rem; /* Tamaño de fuente */
-  font-weight: 500; /* Grosor de fuente */
+  color: #666;
+  transition: color 0.2s ease;
+  font-size: 1.1rem; /* Medium font size */
 }
 
-.bg-body-tertiary {
-  background-color: #EBBB99 !important; /* Fondo general del cuerpo */
+.nav-link:hover {
+  color: #333;
 }
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Tipografía */
-  background-color: #EBBB99; /* Fondo general del cuerpo */
+.nav-link.active {
+  color: #337ab7;
+  font-weight: bold;
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem; /* Medium font size */
+  line-height: 1;
+  background-color: transparent;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s ease;
+}
+
+.navbar-toggler:hover {
+  background-color: #f7f7f7;
+}
+
+.navbar-toggler-icon {
+  font-size: 1.2rem; /* Medium font size */
+  line-height: 1;
+  color: #666;
 }

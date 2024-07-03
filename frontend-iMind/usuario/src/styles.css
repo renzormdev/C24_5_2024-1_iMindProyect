@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background-image: url('../public/assets/fondo.png');
+    background-size: cover; /* Para que la imagen cubra todo el fondo */
+    background-position: center; /* Centrar la imagen */
+    background-repeat: no-repeat; /* No repetir la imagen */
+    height: 100vh;
+    margin: 0;
+}
+
+app-root {
+    display: block;
+    height: 100%;
+  }
+  
+  /* Asegúrate de que los componentes tengan al menos altura mínima del 100% */
+  :host {
+    display: block;
+    min-height: 100%;
+  }
